@@ -1,0 +1,58 @@
+
+
+## Overview
+
+                    │             Analyzed Image               
+────────────────────┼──────────────────────────────────────────
+  Target            │  javaneseivankov/poros-week1-web:1.0.1   
+    digest          │  094b3b871df2                            
+    platform        │ linux/amd64                              
+    vulnerabilities │    0C     2H     2M     0L               
+    size            │ 56 MB                                    
+    packages        │ 299                                      
+
+
+## Packages and Vulnerabilities
+
+   0C     1H     0M     0L  cross-spawn 7.0.3
+pkg:npm/cross-spawn@7.0.3
+
+    ✗ HIGH CVE-2024-21538 [Inefficient Regular Expression Complexity]
+      https://scout.docker.com/v/CVE-2024-21538?s=github&n=cross-spawn&t=npm&vr=%3E%3D7.0.0%2C%3C7.0.5
+      Affected range : >=7.0.0                                       
+                     : <7.0.5                                        
+      Fixed version  : 7.0.5                                         
+      CVSS Score     : 7.5                                           
+      CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H  
+    
+
+   0C     1H     0M     0L  musl 1.2.4_git20230717-r4
+pkg:apk/alpine/musl@1.2.4_git20230717-r4?os_name=alpine&os_version=3.19
+
+    ✗ HIGH CVE-2025-26519
+      https://scout.docker.com/v/CVE-2025-26519?s=alpine&n=musl&ns=alpine&t=apk&osn=alpine&osv=3.19&vr=%3C1.2.4_git20230717-r5
+      Affected range : <1.2.4_git20230717-r5  
+      Fixed version  : 1.2.4_git20230717-r5   
+    
+
+   0C     0H     2M     0L  openssl 3.1.7-r0
+pkg:apk/alpine/openssl@3.1.7-r0?os_name=alpine&os_version=3.19
+
+    ✗ MEDIUM CVE-2024-9143
+      https://scout.docker.com/v/CVE-2024-9143?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.19&vr=%3C3.1.7-r1
+      Affected range : <3.1.7-r1  
+      Fixed version  : 3.1.7-r1   
+    
+    ✗ MEDIUM CVE-2024-13176
+      https://scout.docker.com/v/CVE-2024-13176?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.19&vr=%3C3.1.8-r0
+      Affected range : <3.1.8-r0  
+      Fixed version  : 3.1.8-r0   
+    
+
+
+4 vulnerabilities found in 3 packages
+  CRITICAL  0  
+  HIGH      2  
+  MEDIUM    2  
+  LOW       0  
+
