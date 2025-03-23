@@ -1,0 +1,37 @@
+services:
+   db:
+      image: postgres:16-alpine
+      environment:
+         POSTGRES_USER: ${DB_USER}
+         POSTGRES_PASSWORD: ${DB_PASSWORD}
+         POSTGRES_DB: ${DB_NAME}
+      volumes:
+         - db_data:/var/lib/postgresql/data
+      networks:
+         - poros-week1
+
+   web:
+      # # sudah tidak digunakan karena kita akan pull dari registry
+      # build:
+      #    context: '.'
+      #    dockerfile: Dockerfile
+      build: 'javaneseivankov/poros-week1-week:1.0.0'
+      image: 'poros-week1-web:1.0.0'
+      ports:
+         - '3000:3000'
+      environment:
+         DB_HOST: db
+         DB_USER: ${DB_USER}
+         DB_PASSWORD: ${DB_PASSWORD}
+         DB_NAME: ${DB_NAME}
+         DB_PORT: ${DB_PORT}
+      depends_on:
+         - db
+      networks:
+         - poros-week1
+
+volumes:
+   db_data:
+
+networks:
+   poros-week1:
