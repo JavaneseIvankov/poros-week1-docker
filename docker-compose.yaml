@@ -15,8 +15,7 @@ services:
       # build:
       #    context: '.'
       #    dockerfile: Dockerfile
-      build: 'javaneseivankov/poros-week1-week:1.0.0'
-      image: 'poros-week1-web:1.0.0'
+      image: 'javaneseivankov/poros-week1-web:1.0.1'
       ports:
          - '3000:3000'
       environment:
